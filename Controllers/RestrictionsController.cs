@@ -3,7 +3,6 @@ using RestrictionService.Models;
 using RestrictionService.Services;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Google.Cloud.Firestore;
 
 namespace RestrictionService.Controllers
 {
@@ -18,6 +17,7 @@ namespace RestrictionService.Controllers
             _firestoreService = firestoreService;
         }
 
+        // 1. Obtener restricciones por studentId
         [HttpGet("{studentId}")]
         public async Task<ActionResult<List<Restriction>>> GetRestrictions(string studentId)
         {
@@ -25,11 +25,29 @@ namespace RestrictionService.Controllers
             return Ok(restrictions);
         }
 
-        [HttpPost]
-        public async Task<ActionResult> AssignRestriction(Restriction restriction)
+        // 2. Validar si el estudiante tiene restricciones
+        [HttpGet("validate/{studentId}")]
+        public async Task<ActionResult<bool>> ValidateStudent(string studentId)
         {
-            restriction.AssignedAt = Timestamp.GetCurrentTimestamp();
-            await _firestoreService.AssignRestriction(restriction);
+            var hasRestrictions = await _firestoreService.ValidateStudent(studentId);
+            return Ok(hasRestrictions);
+        }
+
+        // 3. Asignar restricción
+        [HttpPost]
+        public async Task<ActionResult> AssignRestriction(string studentId, string reason)
+        {
+           
+            await _firestoreService.AssignRestriction(studentId, reason);
+            return Ok();
+        }
+
+        // 4. Retirar restricción
+        [HttpDelete("{studentId}/{restrictionId}")]
+        public async Task<ActionResult> RemoveRestriction(string studentId, string restrictionId)
+        {
+            
+            await _firestoreService.RemoveRestriction(studentId, restrictionId);
             return Ok();
         }
     }

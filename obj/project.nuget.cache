@@ -1,15 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "WI1+g+zDMUY=",
+  "dgSpecHash": "FXNEy6Rt5+I=",
   "success": true,
   "projectFilePath": "C:\\Users\\aawrf\\OneDrive\\Escritorio\\Restrictions-Service\\RestrictionsService\\RestrictionsService.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\aawrf\\.nuget\\packages\\firebaseadmin\\3.0.1\\firebaseadmin.3.0.1.nupkg.sha512",
     "C:\\Users\\aawrf\\.nuget\\packages\\google.api.commonprotos\\2.15.0\\google.api.commonprotos.2.15.0.nupkg.sha512",
     "C:\\Users\\aawrf\\.nuget\\packages\\google.api.gax\\4.8.0\\google.api.gax.4.8.0.nupkg.sha512",
     "C:\\Users\\aawrf\\.nuget\\packages\\google.api.gax.grpc\\4.8.0\\google.api.gax.grpc.4.8.0.nupkg.sha512",
-    "C:\\Users\\aawrf\\.nuget\\packages\\google.apis\\1.67.0\\google.apis.1.67.0.nupkg.sha512",
-    "C:\\Users\\aawrf\\.nuget\\packages\\google.apis.auth\\1.67.0\\google.apis.auth.1.67.0.nupkg.sha512",
-    "C:\\Users\\aawrf\\.nuget\\packages\\google.apis.core\\1.67.0\\google.apis.core.1.67.0.nupkg.sha512",
+    "C:\\Users\\aawrf\\.nuget\\packages\\google.api.gax.rest\\4.8.0\\google.api.gax.rest.4.8.0.nupkg.sha512",
+    "C:\\Users\\aawrf\\.nuget\\packages\\google.apis\\1.68.0\\google.apis.1.68.0.nupkg.sha512",
+    "C:\\Users\\aawrf\\.nuget\\packages\\google.apis.auth\\1.68.0\\google.apis.auth.1.68.0.nupkg.sha512",
+    "C:\\Users\\aawrf\\.nuget\\packages\\google.apis.core\\1.68.0\\google.apis.core.1.68.0.nupkg.sha512",
     "C:\\Users\\aawrf\\.nuget\\packages\\google.cloud.firestore\\3.8.0\\google.cloud.firestore.3.8.0.nupkg.sha512",
     "C:\\Users\\aawrf\\.nuget\\packages\\google.cloud.firestore.v1\\3.8.0\\google.cloud.firestore.v1.3.8.0.nupkg.sha512",
     "C:\\Users\\aawrf\\.nuget\\packages\\google.cloud.location\\2.3.0\\google.cloud.location.2.3.0.nupkg.sha512",
@@ -31,10 +33,9 @@
     "C:\\Users\\aawrf\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
     "C:\\Users\\aawrf\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
     "C:\\Users\\aawrf\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
-    "C:\\Users\\aawrf\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
+    "C:\\Users\\aawrf\\.nuget\\packages\\system.collections.immutable\\8.0.0\\system.collections.immutable.8.0.0.nupkg.sha512",
     "C:\\Users\\aawrf\\.nuget\\packages\\system.linq.async\\6.0.1\\system.linq.async.6.0.1.nupkg.sha512",
-    "C:\\Users\\aawrf\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512",
-    "C:\\Users\\aawrf\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\aawrf\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512"
   ],
   "logs": []
 }
