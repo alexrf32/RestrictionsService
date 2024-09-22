@@ -3,6 +3,7 @@ using RestrictionService.Models;
 using RestrictionService.Services;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Google.Cloud.Firestore;
 
 namespace RestrictionService.Controllers
 {
