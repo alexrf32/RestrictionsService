@@ -53,3 +53,7 @@ C:\Users\aawrf\OneDrive\Escritorio\restrictions-service\RestrictionsService\obj\
 C:\Users\aawrf\OneDrive\Escritorio\restrictions-service\RestrictionsService\obj\Debug\net8.0\RestrictionsService.pdb
 C:\Users\aawrf\OneDrive\Escritorio\restrictions-service\RestrictionsService\obj\Debug\net8.0\RestrictionsService.genruntimeconfig.cache
 C:\Users\aawrf\OneDrive\Escritorio\restrictions-service\RestrictionsService\obj\Debug\net8.0\ref\RestrictionsService.dll
+C:\Users\aawrf\OneDrive\Escritorio\Restrictions-Service\RestrictionsService\bin\Debug\net8.0\package-lock.json
+C:\Users\aawrf\OneDrive\Escritorio\Restrictions-Service\RestrictionsService\bin\Debug\net8.0\FirebaseAdmin.dll
+C:\Users\aawrf\OneDrive\Escritorio\Restrictions-Service\RestrictionsService\bin\Debug\net8.0\Google.Api.Gax.Rest.dll
+C:\Users\aawrf\OneDrive\Escritorio\Restrictions-Service\RestrictionsService\obj\Debug\net8.0\RestrictionsService.sourcelink.json
