@@ -13,15 +13,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-
 if (!app.Environment.IsDevelopment())
 {
     app.UseHsts();
 }
-
-
-app.UseHttpsRedirection();
-
 
 var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
 app.Urls.Add($"http://*:{port}");
