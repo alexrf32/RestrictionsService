@@ -1,9 +1,7 @@
 var builder = WebApplication.CreateBuilder(args);
 
-// Configurar Kestrel para escuchar en el puerto 8080
 builder.WebHost.ConfigureKestrel(serverOptions =>
 {
-    // Escucha solo en el puerto 8080
     serverOptions.ListenAnyIP(8080);
 });
 
