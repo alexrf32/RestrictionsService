@@ -1,7 +1,7 @@
 # Imagen base para el entorno de ejecución
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
-EXPOSE 80
+EXPOSE 8080
 
 # Imagen base para el entorno de desarrollo y construcción
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build

@@ -3,24 +3,27 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
-
 builder.Services.AddSingleton<RestrictionService.Services.FirestoreService>();
 
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 
 if (app.Environment.IsDevelopment())
 {
-   
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseHttpsRedirection();  
+}
+else
+{
+    app.UseHsts();  
 }
 
-app.UseHttpsRedirection();
-app.MapControllers();  
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+app.Urls.Add($"http://*:{port}");
+
 app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
