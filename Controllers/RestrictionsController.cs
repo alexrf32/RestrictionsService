@@ -22,6 +22,10 @@ namespace RestrictionService.Controllers
         public async Task<ActionResult<List<Restriction>>> GetRestrictions(string studentId)
         {
             var restrictions = await _firestoreService.GetRestrictions(studentId);
+            if (restrictions == null || restrictions.Count == 0)
+            {
+                return NotFound("No se encontraron restricciones para el estudiante.");
+            }
             return Ok(restrictions);
         }
 
@@ -35,20 +39,29 @@ namespace RestrictionService.Controllers
 
         // 3. Asignar restricción
         [HttpPost]
-        public async Task<ActionResult> AssignRestriction(string studentId, string reason)
+        public async Task<ActionResult> AssignRestriction([FromBody] AssignRestrictionRequest request)
         {
-           
-            await _firestoreService.AssignRestriction(studentId, reason);
-            return Ok();
+            if (string.IsNullOrEmpty(request.StudentId) || string.IsNullOrEmpty(request.Reason))
+            {
+                return BadRequest("El ID del estudiante y la razón de la restricción son obligatorios.");
+            }
+
+            await _firestoreService.AssignRestriction(request.StudentId, request.Reason);
+            return Ok("Restricción asignada exitosamente.");
         }
 
         // 4. Retirar restricción
         [HttpDelete("{studentId}/{restrictionId}")]
         public async Task<ActionResult> RemoveRestriction(string studentId, string restrictionId)
         {
-            
             await _firestoreService.RemoveRestriction(studentId, restrictionId);
-            return Ok();
+            return Ok("Restricción retirada exitosamente.");
         }
+    }
+ // Clase auxiliar para el cuerpo de la solicitud de asignación de restricción
+     public class AssignRestrictionRequest
+    {
+        public string? StudentId { get; set; }
+        public string? Reason { get; set; }
     }
 }
