@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RestrictionsService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+34ff724ab3134b0b19326ead4161ef7b28ae64b6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d09dafaf5aef0b5fa7306d3a703291cfd7e0b806")]
 [assembly: System.Reflection.AssemblyProductAttribute("RestrictionsService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RestrictionsService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
