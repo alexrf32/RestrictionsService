@@ -7,17 +7,21 @@ builder.Services.AddSingleton<RestrictionService.Services.FirestoreService>();
 
 var app = builder.Build();
 
-
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    app.UseHttpsRedirection();  
 }
-else
+
+
+if (!app.Environment.IsDevelopment())
 {
-    app.UseHsts();  
+    app.UseHsts();
 }
+
+
+app.UseHttpsRedirection();
+
 
 var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
 app.Urls.Add($"http://*:{port}");
@@ -26,4 +30,3 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-
