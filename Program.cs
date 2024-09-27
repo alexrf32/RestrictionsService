@@ -7,15 +7,12 @@ builder.Services.AddSingleton<RestrictionService.Services.FirestoreService>();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-else
-{
-
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
+    c.RoutePrefix = string.Empty; 
+});
 
 if (app.Environment.IsDevelopment())
 {
